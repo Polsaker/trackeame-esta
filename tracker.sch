@@ -792,7 +792,7 @@ Wire Wire Line
 	5700 3350 5600 3350
 Text Label 5700 3450 0    50   ~ 0
 SPI1_SCK
-Text GLabel 5700 3750 2    50   Input ~ 0
+Text GLabel 5700 4050 2    50   Input ~ 0
 UART_RI
 Wire Wire Line
 	5700 3750 5600 3750
@@ -927,7 +927,6 @@ Wire Wire Line
 Connection ~ 1350 1600
 NoConn ~ 4600 4250
 NoConn ~ 4600 3750
-NoConn ~ 5600 4050
 NoConn ~ 5600 4850
 $Comp
 L Device:Crystal_Small Y1
@@ -1729,4 +1728,67 @@ $EndComp
 Connection ~ 800  3950
 Wire Wire Line
 	800  3950 750  3950
+Wire Wire Line
+	5600 4050 5700 4050
+Text Label 5700 3750 0    50   ~ 0
+ADC1_IN9
+Text Label 1400 4850 2    50   ~ 0
+ADC1_IN9
+$Comp
+L power:VDD #PWR032
+U 1 1 5F7D561F
+P 1500 4550
+F 0 "#PWR032" H 1500 4400 50  0001 C CNN
+F 1 "VDD" H 1515 4723 50  0000 C CNN
+F 2 "" H 1500 4550 50  0001 C CNN
+F 3 "" H 1500 4550 50  0001 C CNN
+	1    1500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 5F7D6069
+P 1500 4700
+F 0 "R8" H 1559 4746 50  0000 L CNN
+F 1 "100k" H 1559 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1500 4700 50  0001 C CNN
+F 3 "~" H 1500 4700 50  0001 C CNN
+F 4 "C149504" H 1500 4700 50  0001 C CNN "LCSC"
+	1    1500 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4550 1500 4600
+Wire Wire Line
+	1500 4800 1500 4850
+Wire Wire Line
+	1500 4850 1400 4850
+Wire Wire Line
+	1500 4850 1500 4900
+Connection ~ 1500 4850
+$Comp
+L power:GND #PWR040
+U 1 1 5F816841
+P 1500 5150
+F 0 "#PWR040" H 1500 4900 50  0001 C CNN
+F 1 "GND" H 1505 4977 50  0000 C CNN
+F 2 "" H 1500 5150 50  0001 C CNN
+F 3 "" H 1500 5150 50  0001 C CNN
+	1    1500 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 5150 1500 5100
+$Comp
+L Device:R_Small R9
+U 1 1 5F82DED9
+P 1500 5000
+F 0 "R9" H 1559 5046 50  0000 L CNN
+F 1 "100k" H 1559 4955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1500 5000 50  0001 C CNN
+F 3 "~" H 1500 5000 50  0001 C CNN
+F 4 "C149504" H 1500 5000 50  0001 C CNN "LCSC"
+	1    1500 5000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
